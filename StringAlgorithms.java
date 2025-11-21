@@ -7,10 +7,11 @@ public class StringAlgorithms {
      */
     public static String printCharacters(String word) {
         // TODO: Implement this method
-        for (int i = 0; i < word.length(); i++) {
-        System.out.println(word.substring(i, (i + 1)));
+        String printA = word.substring(0, 1);
+        for (int i = 1; i < word.length(); i++) {
+        printA += "\n" + word.substring(i, i +1);
         }
-        return "";
+        return printA;
     }
 
 
@@ -21,10 +22,11 @@ public class StringAlgorithms {
      */
     public static String reverseWord(String word) {
         // TODO: Implement this method
+        String printB = "";
         for (int n = word.length(); n > 0; n--) {
-        System.out.print(word.substring((n - 1), n));
+        printB += word.substring((n - 1), n);
         }
-        return "";
+        return printB;
     }
 
 
@@ -35,20 +37,18 @@ public class StringAlgorithms {
      */
     public static String capitalizeString(String sentence) {
         // TODO: Implement this method
-        
+        String printC = (sentence.substring(0, 1)).toUpperCase();
         for (int r = 0; r < sentence.length(); r++) {
          if (sentence.substring(r, (r+1)).equals(" ")) {
-            System.out.print(" " + (sentence.substring((r + 1), (r + 2))).toUpperCase());
+            printC += " " + (sentence.substring((r + 1), (r + 2))).toUpperCase();
             r++;
-         } else if (r == 0) {
-         System.out.print((sentence.substring(0, 1)).toUpperCase());
          } else {
-         System.out.print(sentence.substring(r, (r + 1)));
+         printC += sentence.substring(r, (r + 1));
          }
         
         }
         
-        return "";
+        return printC;
     }
 
 
