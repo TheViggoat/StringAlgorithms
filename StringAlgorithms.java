@@ -38,7 +38,7 @@ public class StringAlgorithms {
     public static String capitalizeString(String sentence) {
         // TODO: Implement this method
         String printC = (sentence.substring(0, 1)).toUpperCase();
-        for (int r = 0; r < sentence.length(); r++) {
+        for (int r = 1; r < sentence.length(); r++) {
          if (sentence.substring(r, (r+1)).equals(" ")) {
             printC += " " + (sentence.substring((r + 1), (r + 2))).toUpperCase();
             r++;
