@@ -5,13 +5,14 @@ public class StringAlgorithms {
      * Write a method that takes a String 'word' and returns
      * a String where each character is placed on its own line.
      */
-    public static String printCharacters(String word) {
+     public static String printCharacters(String word) {
         // TODO: Implement this method
-        String printA = word.substring(0, 1);
-        for (int i = 1; i < word.length(); i++) {
-        printA += "\n" + word.substring(i, i +1);
+        String stringA = "";
+        for (int i = 0; i <= word.length() - 1; i++) {
+          // System.out.println(word.substring(i, i + 1));
+            stringA += word.substring(i, i + 1) + "\n";
         }
-        return printA;
+        return stringA;
     }
 
 
@@ -95,7 +96,7 @@ public class StringAlgorithms {
         System.out.println("\nTesting capitalizeString:");
         // Example:
         // System.out.println(capitalizeString("the quick brown fox"));
-         System.out.println(capitalizeString("hello fish"));
+         System.out.println(capitalizeString("brave new world"));
 
         System.out.println("\nTesting detectPalindrome:");
         // Example:
